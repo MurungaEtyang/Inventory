@@ -1,5 +1,6 @@
 package main;
 import addData.AddProduct;
+import addData.AddStaff;
 import database.Database;
 import addData.AddUser;
 
@@ -8,7 +9,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("1. Create Table.\n2. Add users.\n3. Add product");
+        System.out.println("1. Create Table.\n2. Add users.\n3. Add product\n4. Add staff");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter number: ");
 
@@ -23,6 +24,9 @@ public class Main {
             }else  if (input == 3) {
                 AddProduct product = new AddProduct();
                 product.insertProduct();
+            }else  if (input == 4) {
+                AddStaff staff= new AddStaff();
+                staff.addStaff();
             }
             else{
                 System.out.println("select the right number");

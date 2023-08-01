@@ -11,10 +11,19 @@ public class Database {
       try {
          Class.forName("org.sqlite.JDBC");
          c = DriverManager.getConnection("jdbc:sqlite:sample.db");
-
          stmt = c.createStatement();
+
+          String staff = "CREATE TABLE STAFF " +
+                        "(" +
+                        " FIRSTNAME           TEXT    NOT NULL, " +
+                        " LASTNAME           TEXT    NOT NULL, " +
+                        " USERNAME           TEXT    NOT NULL, " +
+                        " PASSWORD           TEXT    NOT NULL)";
+         stmt.executeUpdate(staff);
+
+
          String users = "CREATE TABLE USERS " +
-                        "(ID INT PRIMARY KEY UNIQUE NOT NULL," +
+                        "(" +
                         " FIRSTNAME           TEXT    NOT NULL, " +
                         " LASTNAME           TEXT    NOT NULL, " +
                         " EMAIL           TEXT    NOT NULL, " +
@@ -24,12 +33,14 @@ public class Database {
          stmt.executeUpdate(users);
 
          String products = "CREATE TABLE PRODUCTS " +
-                        "(ID INT PRIMARY KEY  UNIQUE NOT NULL," +
+                        "(" +
                         " PRODUCTNAME           TEXT    NOT NULL, " +
                         " PRODUCTCODE           TEXT    NOT NULL, " +
                         " PRODUCTBRAND           TEXT    NOT NULL, " +
                         " PRODUCTPRICE           TEXT    NOT NULL)";
          stmt.executeUpdate(products);
+
+
          stmt.close();
 
          c.close();

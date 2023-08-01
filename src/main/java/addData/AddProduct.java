@@ -13,11 +13,11 @@ public class AddProduct {
       System.out.println("Enter product name: ");
       String productName = scanner.next();
       System.out.println("Enter product code: ");
-      double productCode = scanner.nextDouble();
+      int productCode = scanner.nextInt();
       System.out.println("Enter product brand: ");
       String productBrand = scanner.next();
       System.out.println("Enter product price: ");
-      double productPrice = scanner.nextDouble();
+      int productPrice = scanner.nextInt();
 
       try {
          Class.forName("org.sqlite.JDBC");
@@ -26,8 +26,8 @@ public class AddProduct {
 
          stmt = c.createStatement();
 
-         String sql = "INSERT INTO PRODUCTS (ID,PRODUCTNAME,PRODUCTCODE,PRODUCTBRAND,PRODUCTPRICE) " +
-                        "VALUES ('1', '"+productName+"', '"+ productCode +"', '"+productBrand+"', " +
+         String sql = "INSERT INTO PRODUCTS (PRODUCTNAME,PRODUCTCODE,PRODUCTBRAND,PRODUCTPRICE) " +
+                        "VALUES ('"+productName+"', '"+ productCode +"', '"+productBrand+"', " +
                  "'"+productPrice+"')";
          stmt.executeUpdate(sql);
 

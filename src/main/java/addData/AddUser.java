@@ -21,7 +21,7 @@ public class AddUser {
       System.out.println("Enter password");
       String password = scanner.next();
       System.out.println("Enter salary: ");
-      double salary = scanner.nextDouble();
+      int salary = scanner.nextInt();
 
       try {
          Class.forName("org.sqlite.JDBC");
@@ -30,12 +30,9 @@ public class AddUser {
 
          stmt = c.createStatement();
 
-         String sql = "INSERT INTO USERS (ID,FIRSTNAME,LASTNAME,EMAIL,USERNAME,PASSWORD,SALARY) " +
-                        "VALUES (1, '"+firstName+"', '"+ lastName +"', '"+email+"', " +
+         String sql = "INSERT INTO USERS (FIRSTNAME,LASTNAME,EMAIL,USERNAME,PASSWORD,SALARY) " +
+                        "VALUES ('"+firstName+"', '"+ lastName +"', '"+email+"', " +
                  "'"+username+"', '"+password+"','"+salary+"')";
-         stmt.executeUpdate(sql);
-
-
          stmt.executeUpdate(sql);
 
          stmt.close();
