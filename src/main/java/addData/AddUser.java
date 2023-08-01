@@ -31,7 +31,7 @@ public class AddUser {
          stmt = c.createStatement();
 
          String sql = "INSERT INTO USERS (ID,FIRSTNAME,LASTNAME,EMAIL,USERNAME,PASSWORD,SALARY) " +
-                        "VALUES ('1', '"+firstName+"', '"+ lastName +"', '"+email+"', " +
+                        "VALUES (1, '"+firstName+"', '"+ lastName +"', '"+email+"', " +
                  "'"+username+"', '"+password+"','"+salary+"')";
          stmt.executeUpdate(sql);
 
