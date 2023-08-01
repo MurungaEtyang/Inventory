@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class AddStaff {
     public void addStaff(){
           Scanner scanner = new Scanner(System.in);
-          Connection c = null;
-          Statement stmt = null;
+          Connection c;
+          Statement stmt;
 
           System.out.println("Enter first name: ");
           String firstName = scanner.next();

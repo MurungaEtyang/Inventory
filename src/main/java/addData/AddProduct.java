@@ -7,8 +7,8 @@ public class AddProduct {
 
    public void insertProduct() {
       Scanner scanner = new Scanner(System.in);
-      Connection c = null;
-      Statement stmt = null;
+      Connection c;
+      Statement stmt;
 
       System.out.println("Enter product name: ");
       String productName = scanner.next();

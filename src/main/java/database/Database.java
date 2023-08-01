@@ -5,8 +5,8 @@ import java.sql.*;
 
 public class Database {
   public  void database() {
-      Connection c = null;
-      Statement stmt = null;
+      Connection c;
+      Statement stmt;
 
       try {
          Class.forName("org.sqlite.JDBC");
