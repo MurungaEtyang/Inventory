@@ -1,28 +1,20 @@
 package addData;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class AddStaff {
-    public void addStaff() {
+public class AddPaymentMethod {
+    public void insertPayment() {
         // Create a Scanner object to read user input
         Scanner scanner = new Scanner(System.in);
-
-        // Declare variables to store staff details
+        // Declare variables to store payment details
         Connection c;
         Statement stmt;
-
-        // Prompt the user to enter staff details
-        System.out.println("Enter first name: ");
-        String firstName = scanner.next();
-        System.out.println("Enter last name: ");
-        String lastName = scanner.next();
-        System.out.println("Enter email: ");
-        String email = scanner.next();
-        System.out.println("password: ");
-        String password = scanner.next();
-
+        // Prompt the user to enter payment details
+        System.out.println("Enter payment method: ");
+        String paymentMethod = scanner.next();
         try {
             // Load the JDBC driver for SQLite
             Class.forName("org.sqlite.JDBC");
@@ -34,12 +26,12 @@ public class AddStaff {
             // Create a statement for executing SQL queries
             stmt = c.createStatement();
 
-            // Create an SQL query to insert staff details into the "STAFF" table
-            String staff = "INSERT INTO STAFF (FIRSTNAME, LASTNAME, USERNAME, PASSWORD) " +
-                    "VALUES('" + firstName + "', '" + lastName + "', '" + email + "', '" + password + "')";
+            // Create an SQL query to insert payment details into the "PAYMENT" table
+            String payment = "INSERT INTO PAYMENTMETHOD (PAYMENTMETHODTEXT) " +
+                    "VALUES('" + paymentMethod + "')";
 
             // Execute the SQL query to insert the data
-            stmt.executeUpdate(staff);
+            stmt.executeUpdate(payment);
 
             // Close the statement and commit the changes to the database
             stmt.close();
@@ -50,8 +42,7 @@ public class AddStaff {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);
         }
-
         // If no exceptions occur, print a success message
-        System.out.println("Records created successfully");
+        System.out.println("Payment added successfully");
     }
 }

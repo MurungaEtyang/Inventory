@@ -25,8 +25,8 @@ public class AddProduct {
         try {
             // Load the JDBC driver for SQLite
             Class.forName("org.sqlite.JDBC");
-            // Connect to the SQLite database named "sample.db"
-            c = DriverManager.getConnection("jdbc:sqlite:sample.db");
+            // Connect to the SQLite database named "Inventory.db"
+            c = DriverManager.getConnection("jdbc:sqlite:Inventory.db");
             c.setAutoCommit(false);
 
             // Create a statement for executing SQL queries

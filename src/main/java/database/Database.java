@@ -11,10 +11,18 @@ public class Database {
         try {
             // Load the JDBC driver for SQLite
             Class.forName("org.sqlite.JDBC");
-            // Connect to the SQLite database named "sample.db"
-            c = DriverManager.getConnection("jdbc:sqlite:sample.db");
+            // Connect to the SQLite database named "Inventory.db"
+            c = DriverManager.getConnection("jdbc:sqlite:Inventory.db");
             // Create a statement for executing SQL queries
             stmt = c.createStatement();
+
+            // Create the "STAFF" table with columns: FIRSTNAME, LASTNAME, USERNAME, and PASSWORD
+            String paymentMethod = "CREATE TABLE IF NOT EXISTS PAYMENTMETHOD " +
+                    "(PAYMENTMETHOD TEXT  NOT NULL)";
+
+
+
+            stmt.executeUpdate(paymentMethod);
 
             // Create the "STAFF" table with columns: FIRSTNAME, LASTNAME, USERNAME, and PASSWORD
             String staff = "CREATE TABLE IF NOT EXISTS STAFF " +
