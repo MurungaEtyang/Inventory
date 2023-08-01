@@ -1,4 +1,4 @@
-package org.example;
+package main;
 import addData.AddProduct;
 import database.Database;
 import addData.AddUser;
