@@ -1,11 +1,11 @@
-package database;
+package addData;
 
 import java.sql.*;
 import java.util.Scanner;
 
-public class InsertData{
+public class AddUser {
 
-   public static void main( String args[] ) {
+   public void insertUser() {
       Scanner scanner = new Scanner(System.in);
       Connection c = null;
       Statement stmt = null;
@@ -29,8 +29,9 @@ public class InsertData{
          c.setAutoCommit(false);
 
          stmt = c.createStatement();
+
          String sql = "INSERT INTO USERS (ID,FIRSTNAME,LASTNAME,EMAIL,USERNAME,PASSWORD,SALARY) " +
-                        "VALUES (1, '"+firstName+"', '"+ lastName +"', '"+email+"', " +
+                        "VALUES ('1', '"+firstName+"', '"+ lastName +"', '"+email+"', " +
                  "'"+username+"', '"+password+"','"+salary+"')";
          stmt.executeUpdate(sql);
 

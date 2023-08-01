@@ -13,14 +13,12 @@ public class Database {
          c = DriverManager.getConnection("jdbc:sqlite:sample.db");
 
          stmt = c.createStatement();
-         String sql = "CREATE TABLE USERS " +
-                        "(ID INT PRIMARY KEY NOT NULL" +
-                        " FIRSTNAME           TEXT    NOT NULL, " +
-                        " LASTNAME            TEXT     NOT NULL, " +
-                        " EMAIL        CHAR(50), " +
-                        " USERNAME TEXT NOT NULL, " +
-                        " PASSWORD TEXT NOT NULL, " +
-                        " SALARY         REAL)";
+         String sql = "CREATE TABLE PRODUCTS " +
+                        "(ID INT PRIMARY KEY     NOT NULL," +
+                        " PRODUCTNAME           TEXT    NOT NULL, " +
+                        " PRODUCTCODE           TEXT    NOT NULL, " +
+                        " PRODUCTBRAND           TEXT    NOT NULL, " +
+                        " PRODUCTPRICE           TEXT    NOT NULL)";
          stmt.executeUpdate(sql);
          stmt.close();
 
