@@ -4,6 +4,7 @@ import addData.AddProduct;
 import addData.AddStaff;
 import database.Database;
 import addData.AddUser;
+import login.Login;
 import retrieveData.DatabaseRetrieveStaff;
 import retrieveData.DatabaseRetrieveUsers;
 
@@ -11,7 +12,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Print menu options for the user
+
+        System.out.println("Confirm your Identity");
+        Login login = new Login();
+        login.authenticateUser();
         System.out.println("""
                 1. Create Table.
                 2. Add users.
