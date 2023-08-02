@@ -25,10 +25,10 @@ public class DatabaseRetrieveProducts {
 
             // Iterate over the result set and print the retrieved data
             while (rs.next()) {
-                String productName = rs.getString("PRODUCTNAME");
-                String productCode = rs.getString("PRODUCTCODE");
-                String productBrand = rs.getString("PRODUCTBRAND");
-                String productPrice = rs.getString("PRODUCTPRICE");
+                String productName = rs.getString("PRODUCT_NAME");
+                String productCode = rs.getString("PRODUCT_CODE");
+                String productBrand = rs.getString("PRODUCT_BRAND");
+                String productPrice = rs.getString("PRODUCT_PRICE");
 
 
                 System.out.println("Product: " + productName);

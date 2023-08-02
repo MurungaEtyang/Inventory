@@ -22,8 +22,8 @@ public class DatabaseRetrieveUsers {
 
             // Iterate over the result set and print the retrieved data
             while (rs.next()) {
-                String firstName = rs.getString("FIRSTNAME");
-                String lastName = rs.getString("LASTNAME");
+                String firstName = rs.getString("FIRST_NAME");
+                String lastName = rs.getString("LAST_NAME");
                 String email = rs.getString("EMAIL");
                 String username = rs.getString("USERNAME");
                 double salary = rs.getDouble("SALARY");

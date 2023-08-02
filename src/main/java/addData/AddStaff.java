@@ -35,7 +35,7 @@ public class AddStaff {
             stmt = c.createStatement();
 
             // Create an SQL query to insert staff details into the "STAFF" table
-            String staff = "INSERT INTO STAFF (FIRSTNAME, LASTNAME, USERNAME, PASSWORD) " +
+            String staff = "INSERT INTO STAFF (FIRST_NAME, LAST_NAME, USERNAME, PASSWORD) " +
                     "VALUES('" + firstName + "', '" + lastName + "', '" + email + "', '" + password + "')";
 
             // Execute the SQL query to insert the data

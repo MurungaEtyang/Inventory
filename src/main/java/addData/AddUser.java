@@ -37,7 +37,7 @@ public class AddUser {
             stmt = c.createStatement();
 
             // Create an SQL query to insert user details into the "USERS" table
-            String sql = "INSERT INTO USERS (FIRSTNAME,LASTNAME,EMAIL,USERNAME,PASSWORD,SALARY) " +
+            String sql = "INSERT INTO USERS (FIRST_NAME,LAST_NAME,EMAIL,USERNAME,PASSWORD,SALARY) " +
                     "VALUES ('"+firstName+"', '"+ lastName +"', '"+email+"', " +
                     "'"+username+"', '"+password+"','"+salary+"')";
             // Execute the SQL query to insert the data

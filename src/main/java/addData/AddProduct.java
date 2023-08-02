@@ -33,7 +33,7 @@ public class AddProduct {
             stmt = c.createStatement();
 
             // Create an SQL query to insert product details into the "PRODUCTS" table
-            String sql = "INSERT INTO PRODUCTS (PRODUCTNAME,PRODUCTCODE,PRODUCTBRAND,PRODUCTPRICE) " +
+            String sql = "INSERT INTO PRODUCTS (PRODUCT_NAME,PRODUCT_CODE,PRODUCT_BRAND,PRODUCT_PRICE) " +
                     "VALUES ('"+productName+"', '"+ productCode +"', '"+productBrand+"', " +
                     "'"+productPrice+"')";
             // Execute the SQL query to insert the data
