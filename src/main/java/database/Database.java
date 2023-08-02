@@ -20,8 +20,6 @@ public class Database {
             String paymentMethod = "CREATE TABLE IF NOT EXISTS PAYMENT_METHOD " +
                     "(PAYMENT_METHOD TEXT  NOT NULL)";
 
-
-
             stmt.executeUpdate(paymentMethod);
 
             // Create the "STAFF" table with columns: FIRSTNAME, LASTNAME, USERNAME, and PASSWORD
@@ -30,7 +28,8 @@ public class Database {
                     " FIRST_NAME           TEXT    NOT NULL, " +
                     " LAST_NAME           TEXT    NOT NULL, " +
                     " USERNAME           TEXT    NOT NULL, " +
-                    " PASSWORD           TEXT    NOT NULL)";
+                    " PASSWORD           TEXT    NOT NULL" +
+                    ")";
             stmt.executeUpdate(staff);
 
             // Create the "USERS" table with columns: FIRSTNAME, LASTNAME, EMAIL, USERNAME, PASSWORD, and SALARY
@@ -41,7 +40,8 @@ public class Database {
                     " EMAIL           TEXT    NOT NULL, " +
                     " USERNAME           TEXT    NOT NULL, " +
                     " PASSWORD           TEXT    NOT NULL, " +
-                    " SALARY         REAL)";
+                    " SALARY         REAL" +
+                    ")";
             stmt.executeUpdate(users);
 
             // Create the "PRODUCTS" table with columns: PRODUCT NAME, PRODUCTIVE, PRODUCT BRAND, and PRODUCTIVE
@@ -50,7 +50,8 @@ public class Database {
                     " PRODUCT_NAME           TEXT    NOT NULL, " +
                     " PRODUCT_CODE           TEXT    NOT NULL, " +
                     " PRODUCT_BRAND           TEXT    NOT NULL, " +
-                    " PRODUCT_PRICE           TEXT    NOT NULL)";
+                    " PRODUCT_PRICE           TEXT    NOT NULL" +
+                    ")";
             stmt.executeUpdate(products);
 //
 //            CREATE TABLE IF NOT EXISTS CARD_DETAILS
@@ -60,8 +61,19 @@ public class Database {
                     " CARD_NUMBER           TEXT    NOT NULL, " +
                     " CARD_NAME           TEXT    NOT NULL, " +
                     " EXPIRATION_DATE           TEXT    NOT NULL, " +
-                    " CVV           TEXT    NOT NULL)";
-            stmt.executeUpdate(products);
+                    " CVV           TEXT    NOT NULL" +
+                    ")";
+            stmt.executeUpdate(cardDetails);
+
+//            create table mobile payment
+
+            String mobileDetails = "CREATE TABLE IF NOT EXISTS MOBILE_PAYMENT" +
+                    "(" +
+                    " PHONE_NUMBER           TEXT    NOT NULL, " +
+                    " TRANSACTION_ID           TEXT    NOT NULL, " +
+                    " PHONE_OWNER           TEXT    NOT NULL" +
+                    ")";
+            stmt.executeUpdate(mobileDetails);
 
             // Close the statement and the connection to the database
             stmt.close();

@@ -14,9 +14,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Confirm your Identity");
+        /*System.out.println("Confirm your Identity");
         Login login = new Login();
-        login.authenticateUser();
+        login.authenticateUser();*/
         while(true){
             System.out.println("""
                 1. Create Table.

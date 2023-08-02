@@ -22,6 +22,5 @@ public class Payment {
         BankCard bankCard = new BankCard();
         bankCard.card(userName, cardNumber, cardName, expiryDate, cvv);
 
-
     }
 }
