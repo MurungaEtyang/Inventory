@@ -75,6 +75,14 @@ public class Database {
                     ")";
             stmt.executeUpdate(mobileDetails);
 
+            String accountDetails = "CREATE TABLE IF NOT EXISTS BANK_PAYMENT" +
+                    "(" +
+                    " ACCOUNT_NUMBER           TEXT    NOT NULL, " +
+                    " TRANSACTION_ID           TEXT    NOT NULL, " +
+                    " PHONE_OWNER           TEXT    NOT NULL" +
+                    ")";
+            stmt.executeUpdate(accountDetails);
+
             // Close the statement and the connection to the database
             stmt.close();
             c.close();
