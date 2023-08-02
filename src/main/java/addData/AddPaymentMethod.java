@@ -27,7 +27,7 @@ public class AddPaymentMethod {
             stmt = c.createStatement();
 
             // Create an SQL query to insert payment details into the "PAYMENT" table
-            String payment = "INSERT INTO PAYMENTMETHOD (PAYMENTMETHODTEXT) " +
+            String payment = "INSERT INTO PAYMENTMETHOD (PAYMENTMETHOD) " +
                     "VALUES('" + paymentMethod + "')";
 
             // Execute the SQL query to insert the data

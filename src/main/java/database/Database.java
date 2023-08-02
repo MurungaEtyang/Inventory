@@ -16,7 +16,7 @@ public class Database {
             // Create a statement for executing SQL queries
             stmt = c.createStatement();
 
-            // Create the "STAFF" table with columns: FIRSTNAME, LASTNAME, USERNAME, and PASSWORD
+            // Create the "PAYMENT_METHOD" table with columns: PAYMENT_METHOD
             String paymentMethod = "CREATE TABLE IF NOT EXISTS PAYMENTMETHOD " +
                     "(PAYMENTMETHOD TEXT  NOT NULL)";
 
