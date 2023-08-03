@@ -20,8 +20,7 @@ public class Payment {
         int expiryDate = scanner.nextInt();
         System.out.println("cvv...");
         int cvv = scanner.nextInt();
-        BankCard bankCard = new BankCard();
-        bankCard.card(userName, cardNumber, cardName, expiryDate, cvv);
+        BankCard bankCard = new BankCard(userName, cardNumber, cardName, expiryDate, cvv);
 
     }
 

@@ -5,7 +5,7 @@ import java.sql.Statement;
 
 public class BankCard {
 
-    public void card(String user, int cardNumber, String cardName, int expirationDate, int cvvNumber) {
+    public BankCard(String user, int cardNumber, String cardName, int expirationDate, int cvvNumber) {
         Connection c;
         Statement stmt;
         try {

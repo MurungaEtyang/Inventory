@@ -45,7 +45,7 @@ public class Database {
             stmt.executeUpdate(users);
 
             // Create the "PRODUCTS" table with columns: PRODUCT NAME, PRODUCTIVE, PRODUCT BRAND, and PRODUCTIVE
-            String products = "CREATE TABLE IF NOT EXISTS PRODUCTS " +
+            String products = "CREATE TABLE IF NOT EXISTS PRODUCTS" +
                     "(" +
                     " PRODUCT_NAME           TEXT    NOT NULL, " +
                     " PRODUCT_CODE           TEXT    NOT NULL, " +
@@ -85,6 +85,8 @@ public class Database {
 
             // Close the statement and the connection to the database
             stmt.close();
+
+            c.commit();
             c.close();
         } catch (Exception e) {
             // If any exception occurs, print the error message and exit the program

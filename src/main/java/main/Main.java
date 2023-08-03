@@ -8,6 +8,7 @@ import login.Login;
 import retrieveData.DatabaseRetrieveProducts;
 import retrieveData.DatabaseRetrieveStaff;
 import retrieveData.DatabaseRetrieveUsers;
+import sale.PointOfSale;
 
 import java.util.Scanner;
 
@@ -28,6 +29,7 @@ public class Main {
                 6. Staff list
                 7. Add payment method
                 8. Products list
+                9. pos
                 """);
 
             // Create a Scanner object to read user input
@@ -73,6 +75,13 @@ public class Main {
                 //Products
                     DatabaseRetrieveProducts products = new DatabaseRetrieveProducts();
                     products.retrieveProducts();
+
+                }
+                else if (input == 9) {
+                //point of sale
+                    System.out.println("hello world!");
+                    PointOfSale pos = new PointOfSale();
+                    pos.pos();
 
                 }
 
